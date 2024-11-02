@@ -11,8 +11,10 @@ const Book = ({ book }) => {
         </figure>
         <div className="space-y-4">
           <div className="flex items-center gap-2 mt-5">
-            {tags.map((tag) => (
-              <button className="btn btn-xs font-bold bg-gray-100 hover:bg-gray-100 text-green-600 text-sm text-center">
+            {tags.map((tag, index) => (
+              <button 
+              key={index}
+              className="btn btn-xs font-bold bg-gray-100 hover:bg-gray-100 text-green-600 text-sm text-center">
                 {tag}
               </button>
             ))}
@@ -29,8 +31,8 @@ const Book = ({ book }) => {
                 {rating}
                 <i class="fa-regular fa-star"></i>
                 {/* <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i> */}
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i> */}
               </p>
             </div>
           </div>
